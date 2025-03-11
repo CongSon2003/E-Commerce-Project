@@ -1,0 +1,16 @@
++, cookie-parser: (middleware)  là một công cụ hữu ích giúp bạn làm việc với cookie trong ứng dụng Express. xử lý cookie trong yêu cầu HTTP
++, cookie :  cho phép các ứng dụng web ghi nhớ người dùng giữa các phiên truy cập.
+  Cookies là các tệp được trang web người dùng truy cập tạo ra.
+  Cookie giúp trải nghiệm trực tuyến của bạn dễ dàng hơn bằng cách lưu thông tin duyệt web. Với Cookies, các trang web có thể duy trì trạng thái đăng nhập của bạn, ghi nhớ tùy chọn trang web và cung cấp nội dung phù hợp với vị trí của người dùng.
++, session : là phiên làm việc giữa client và server
+
++, access token : => Xác thực người dùng, quyền người dùng
++, refesh token : => đề tạo lại access token khi token hết hạn
+
+/*
++, Client gửi data email về server nếu client quên mật khẩu 
++, Server check email có hợp lệ hay không => Gửi mail + kèm theo link (password change token)
++, Client check email => client click link => Client gửi api kèm theo token
++, Server kiểm tra token có giống với token mà server gữi qua email không
++, change password
+*/ 

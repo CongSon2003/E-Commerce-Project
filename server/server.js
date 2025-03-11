@@ -1,4 +1,5 @@
 const express = require('express')
+const cookieParser = require('cookie-parser')
 require('dotenv').config()
 const initRouters = require('./routers')
 const dbConnect = require('./config/dbConnect')
@@ -9,7 +10,8 @@ const port = process.env.PORT || 8888
 app.use(express.json())
 // Middleware để phân tích dữ liệu URL-encoded, các biểu mẫu HTML (HTML FORMS)
 app.use(express.urlencoded({ extended : true })) // "extended: true" : Cho phép bạn gửi các đối tượng và mảng phức tạp, Các đối tượng lồng nhau trong dữ liệu.
-
+// Sử dụng cookie-parser middleware
+app.use(cookieParser());
 // Connent db 
 dbConnect()
  
